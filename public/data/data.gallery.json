@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Dish 1",
+        "image": "/images/gallery/unsplash__79ZJS8pV70.png"
+    },
+    {
+        "id": 2,
+        "name": "Dish 2",
+        "image": "/images/gallery/unsplash_74yRjQ-cvNI.png"
+    },
+    {
+        "id": 3,
+        "name": "Dish 3",
+        "image": "/images/gallery/unsplash_idTwDKt2j2o.png"
+    },
+    {
+        "id": 4,
+        "name": "Dish 4",
+        "image": "/images/gallery/unsplash_jeiqzOgwwKU.png"
+    },
+    {
+        "id": 5,
+        "name": "Dish 5",
+        "image": "/images/gallery/unsplash_PxJ9zkM2wdA.png"
+    },
+    {
+        "id": 6,
+        "name": "Dish 6",
+        "image": "/images/gallery/unsplash_W10_NCsLVyc.png"
+    }
+]
