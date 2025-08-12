@@ -6,7 +6,8 @@ import Checkbox from '@/app/component/Auth/checkbox/checkbox'
 import Button from '@/app/component/Auth/input/button'
 import axios from 'axios'
 const Login = () => {
-  const [user, setUser] = useState();
+  const [isLogin, setIsLogin] = useState(false);
+  const [user, setUser] = useState(null);
   useEffect(() => {
     axios.post("http://localhost:8080/auth/login")
   }, [])
