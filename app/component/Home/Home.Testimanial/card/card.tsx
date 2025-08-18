@@ -3,7 +3,7 @@ import React from 'react'
 
 const card = ({ uid, name, anotherName, avatar, comment, defaultImage }: any) => {
     return (
-        <div className='flex flex-col justify-center items-center gap-10 shadow-[0, 0, 1px, 1px] px-5 z-10 rounded-2xl
+        <div className=' h-[20em] flex flex-col justify-center items-center gap-10 shadow-[0, 0, 1px, 1px] px-5 z-10 rounded-2xl
         md:py-16 
         not-md:py-5' style={{ boxShadow: '0 0 5px rgba(0,0,0,0.5)' }}>
             <div className='flex justify-center items-center gap-2'>

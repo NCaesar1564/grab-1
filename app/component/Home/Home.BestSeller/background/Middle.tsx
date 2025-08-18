@@ -3,7 +3,7 @@ import Image1 from '@/public/images/Abstract.png'
 const Middle = () => {
   return (
     <>
-       <Image height={800} width={800} alt='img' src={Image1} className='h-[8em] w-[16em] rotate-z-8'/> 
+       <Image height={237} width={382} alt='img' src={Image1} className=''/> 
     </>
   )
 }

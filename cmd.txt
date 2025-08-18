@@ -1,0 +1,1 @@
+npx json-server public/data.json --port 3001

@@ -1,0 +1,169 @@
+{
+    "BestSeller": [
+        {
+            "id": 1,
+            "name": "Burger",
+            "image": "/images/burger_sandwich_PNG4135.png",
+            "note": "Mushroom Sauce",
+            "price": "5.15",
+            "id-restaurant": 1,
+            "restaurant": "restaurant 1"
+        },
+        {
+            "id": 2,
+            "name": "Food Combo",
+            "image": "/images/Combo-Junk-Food-PNG-Image.png",
+            "note": "Mushroom Sauce",
+            "price": "9.15",
+            "id-restaurant": 2,
+            "restaurant": "restaurant 1"
+        },
+        {
+            "id": 3,
+            "name": "Pizza",
+            "image": "/images/pizza-png-12.png",
+            "note": "Mushroom Sauce",
+            "price": "6.15",
+            "id-restaurant": 1,
+            "restaurant": "restaurant 1"
+        },
+        {
+            "id": 4,
+            "name": "Cake",
+            "image": "/images/purepng.png",
+            "note": "Mushroom Sauce",
+            "price": "5.15",
+            "id-restaurant": 1,
+            "restaurant": "restaurant 1"
+        }
+    ],
+    "Gallery": [
+        {
+            "id": 1,
+            "name": "Dish 1",
+            "image": "/images/gallery/unsplash__79ZJS8pV70.png"
+        },
+        {
+            "id": 2,
+            "name": "Dish 2",
+            "image": "/images/gallery/unsplash_74yRjQ-cvNI.png"
+        },
+        {
+            "id": 3,
+            "name": "Dish 3",
+            "image": "/images/gallery/unsplash_idTwDKt2j2o.png"
+        },
+        {
+            "id": 4,
+            "name": "Dish 4",
+            "image": "/images/gallery/unsplash_jeiqzOgwwKU.png"
+        },
+        {
+            "id": 5,
+            "name": "Dish 5",
+            "image": "/images/gallery/unsplash_PxJ9zkM2wdA.png"
+        },
+        {
+            "id": 6,
+            "name": "Dish 6",
+            "image": "/images/gallery/unsplash_W10_NCsLVyc.png"
+        }
+    ],
+    "Product": [
+        {
+            "id": 1,
+            "name": "Burger",
+            "image": "/images/burger_sandwich_PNG4135.png",
+            "note": "Mushroom Sauce",
+            "price": "5.15"
+        },
+        {
+            "id": 2,
+            "name": "Food Combo",
+            "image": "/images/Combo-Junk-Food-PNG-Image.png",
+            "note": "Mushroom Sauce",
+            "price": "9.15"
+        },
+        {
+            "id": 3,
+            "name": "Pizza",
+            "image": "/images/pizza-png-12.png",
+            "note": "Mushroom Sauce",
+            "price": "6.15"
+        },
+        {
+            "id": 4,
+            "name": "Cake",
+            "image": "/images/purepng.png",
+            "note": "Mushroom Sauce",
+            "price": "5.15"
+        },
+        {
+            "id": 5,
+            "name": "Gyro Sandwich",
+            "image": "/images/product/gyro-sandwich1-1650490757.png",
+            "note": "Delicious gyro sandwich with fresh vegetables and sauce",
+            "price": 15.00,
+            "vote": 5
+        },
+        {
+            "id": 6,
+            "name": "Enchilade",
+            "image": "/images/product/gyro-sandwich1-1650490757.png",
+            "note": "Baked enchilada with cheese, jalapeno and sauce",
+            "price": 25.50,
+            "vote": 5
+        },
+        {
+            "id": 7,
+            "name": "Green Beans",
+            "image": "/images/product/delish-200305-grilled-green-beans-0204-landscape-pf-1584045271.png",
+            "note": "Fresh green beans stir-fried with spices",
+            "price": 12.00,
+            "vote": 5
+        },
+        {
+            "id": 8,
+            "name": "Pizza",
+            "image": "/images/product/delish-200305-grilled-green-beans-0204-landscape-pf-1584045271.png",
+            "note": "Cheesy pizza topped with vegetables and herbs",
+            "price": 18.50,
+            "idRestaurant": 1,
+            "vote": 5
+        },
+        {
+            "id": 9,
+            "name": "Chicken Pot Pie",
+            "image": "/images/product/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2020__10__Chicken-Pot-Pie-LEAD-1-f01cc53ba4dc4b50b91de3aa1e2ef62c.png",
+            "note": "Savory chicken pot pie with flaky crust",
+            "price": 25.00,
+            "vote": 5
+        },
+        {
+            "id": 10,
+            "name": "Green Salad",
+            "image": "/images/product/thai-tossed-green-salad-recipe-3217707-hero-01-8782b0ef1cbd404680af8a51769140ba.png",
+            "note": "Healthy green salad with cucumber and spinach",
+            "price": 15.00,
+            "vote": 5
+        }
+    ],
+    "Testtimonial": [
+        {
+            "idCmt": 1,
+            "uid": 1,
+            "name": "Willians Jhone",
+            "anotherName": "CEO & Co-Founder",
+            "avatar": "/images/comment/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.png",
+            "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis distinctio odit doloribus, at debitis unde corporis illum quasi error expedita minima fugit nesciunt doloremque illo temporibus labore est magni exercitationem."
+        },
+        {
+            "idCmt": 2,
+            "uid": 1,
+            "name": "Willians Hanna",
+            "anotherName": "CEO",
+            "avatar": "/images/comment/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.png",
+            "comment": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. at debitis unde corporis illum quasi error expedita minima fugit nesciunt doloremque illo temporibus labore est magni exercitationem."
+        }
+    ]
+}

@@ -1,6 +1,6 @@
+"use client"
 import Image from 'next/image'
 import Register from './Register'
-
 const page = () => {
     return (
         <div className='flex justify-center items-center gap-2 w-full'>
@@ -9,5 +9,5 @@ const page = () => {
         </div>
     )
 }
- 
+
 export default page

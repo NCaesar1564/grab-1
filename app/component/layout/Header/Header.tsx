@@ -6,13 +6,26 @@ import Menu from "./menu/Menu"
 import Search from "./button/Search"
 import Cart from "./button/Cart"
 import Login from "./button/Login"
+import axios from "axios"
 
+interface User {
+  _id: string,
+  username: string,
+  password: string,
+  email: string,
+  phone: string,
+  fullName: string,
+  avatarUrl: string,
+  address: string,
+  role: string,
+  status: boolean,
+  refreshToken: string,
+}
 const Header = () => {
   const [search, setSearch] = useState(false);
   const [keyword, setKeyword] = useState("");
   const [quality, setQuality] = useState(0);
   const [isDesktop, setIsDesktop] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       setIsDesktop(window.innerWidth > 768);
@@ -30,8 +43,8 @@ const Header = () => {
 
   if (isDesktop) {
     return (
-      <div className='w-full h-[3.75em] flex items-center justify-center'>
-        <div className="w-[1411px] flex items-center justify-center ">
+      <div className='w-full h-[3.75em] flex items-center justify-center mt-[20px]'>
+        <div className="w-[1411px] h-0 flex items-center justify-center ">
           <div className="flex justify-center
           md:w-2/12 ">
             <Logo />
@@ -58,7 +71,7 @@ const Header = () => {
                   <Cart quality={quality} />
                 </div>
                 <div>
-                  <Login />
+                  <Login state={false} />
                 </div>
               </div>
             </div>
@@ -77,7 +90,7 @@ const Header = () => {
             <Search SearchInput={SearchInput} search={search} onTextChange={onTextChange} />
           </div>
           <div className="w-1/3 flex justify-center">
-            <Login />
+            <Login state={false} />
           </div>
         </div>
         <div className="flex items-center justify-center border py-2">

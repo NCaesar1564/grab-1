@@ -2,7 +2,6 @@
 
 import React from 'react'
 import Element from './Element'
-import { IoMenu } from 'react-icons/io5'
 
 const Menu = () => {
   const Item = [

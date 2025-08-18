@@ -62,7 +62,7 @@ const Testimonial = ({ defaultImage }: any) => {
                         </div>
                     )
                 })}
-                <Image height={800} width={800} alt='image' src={images} className='w-5/12 not-md:hidden z-10' />
+                <Image height={800} width={800} alt='image' src={images} className='w-5/12 h-[20em] not-md:hidden z-10' />
             </div>
         </div>
     )

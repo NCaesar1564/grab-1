@@ -1,16 +1,16 @@
 import { IoMdStar } from 'react-icons/io'
 
 const card = ({
-    id, image, name, idRestaurant, restaurant, price, vote,
+    id, image, name, price, vote,
     defaultImage
     // AddToCard
 }: any) => {
     return (
-        <div className='w-[25vw]' key={id}>
-            <a className='w-full' href={`/${idRestaurant}/${id}`}>
-                <img loading='lazy' alt={defaultImage} src={image} className='rounded-t-2xl' />
+        <div className='w-[400px] h-[400px] rounded-t-2xl' key={id}>
+            <a className='w-[400px] h-[300px]' href={`/Dish/${id}`}>
+                <img loading='lazy' alt={name} src={image} className='w-[400px] h-[300px] rounded-t-2xl object-cover' />
             </a>
-            <div className='max-w-[25vw] flex flex-row justify-center items-center'>
+            <div className='max-w-[400px] h-[100px] flex flex-row justify-center items-center'>
                 <div className='w-full flex justify-start items-center p-5 pt-2 gap-40
                 not-md:flex-col not-md:gap-3'>
                     <span className='flex flex-col justify-center items-center gap-3'>

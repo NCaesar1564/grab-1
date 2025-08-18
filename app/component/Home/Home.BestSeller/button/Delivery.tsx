@@ -3,9 +3,9 @@ import Images from '@/public/images/Delivery.png'
 import Image from 'next/image'
 const Delivery = (defaultImage: any) => {
   return (
-    <div className='w-40 flex items-center justify-start pl-3 gap-3 py-2 rounded-3xl bg-[#396C03] relative cursor-pointer'>
-      <p className='text-white'>Bike Delivery</p>
-      <Image height={800} width={800} alt='' src={Images || defaultImage} className='absolute right-0.5 w-10 h-10 p-1 border rounded-[50%]'/>
+    <div className='w-[270px] h-[63px] flex items-center justify-start pl-3 py-2 rounded-4xl bg-[#396C03] cursor-pointer'>
+      <p className='text-white bg-transparent w-[200px]'>Bike Delivery</p>
+      <Image height={54} width={54} alt='' src={Images || defaultImage} className='w-[54px] h-[54px] bg-white border rounded-[50%]'/>
     </div>
   )
 }

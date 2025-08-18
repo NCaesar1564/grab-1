@@ -9,8 +9,6 @@ interface Pop {
   id: number,
   name: string,
   image: string,
-  restaurant: string,
-  idRestaurant: string
   price: number,
   vote: number
 }
@@ -21,25 +19,29 @@ const Product = ({ defaultImage }: any) => {
   const ShowMore = () => {
     if (pop.length > more) {
       setMore(more + 3);
-      setMax(false)
+      if (pop.length > more + 3) {
+        setMax(false)
+      } else {
+        setMax(true)
+      }
     }
     else {
       setMax(true)
     }
   }
   useEffect(() => {
-    axios.get('/data/data.product.json').then(data => setPop(data.data)).catch(err => console.error(err))
+    axios.get('http://localhost:3001/Product').then(data => setPop(data.data)).catch(err => console.error(err))
   }, [])
   return (
     <div>
       <Titile bTitile="Most Popular items" sTitile="Product" />
-      <div className='flex justify-center flex-wrap gap-10'>
+      <div className='w-[1440px] flex justify-center flex-wrap gap-8'>
         {pop.slice(0, more).map((d) => {
           return (
-            <div key={d.id} className=' w-[25vw] shadow rounded-2xl 
-            md:h-[50vh]
-            not-md:h-[25vh]'>
-              <Card id={d.id} image={d.image} name={d.name} idRestaurant={d.idRestaurant} price={d.price} vote={d.vote} defaultImage={defaultImage} />
+            <div key={d.id} className='w-[400px] shadow rounded-2xl hover:shadow-lg hover:scale-95
+            md:h-[400px]
+            not-md:h-[200px]'>
+              <Card id={d.id} image={d.image} name={d.name} price={d.price} vote={d.vote} defaultImage={defaultImage} />
             </div>
           )
         })}

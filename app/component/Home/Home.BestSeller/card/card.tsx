@@ -4,28 +4,27 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 import Border from "./border";
 
-interface BestSeller {
+interface Product {
   id: number,
   name: string,
   image: string,
   note: string,
   price: number,
-  restaurant: string,
-  idRestaurant: number
+  vote: number,
 }
 const Card = (defaultImage: any) => {
-  const [bestS, setBestS] = useState<BestSeller[]>([]);
+  const [product, setProduct] = useState<Product[]>([]);
   useEffect(() => {
-    axios.get('/data/data.bestSeller.json')
-      .then((data) => setBestS(data.data))
+    axios.get('http://localhost:3001/Product')
+      .then((data) => setProduct(data.data))
       .catch(err => console.error(err))
   }, [])
   return (
     <>
-      {bestS.map((d) => {
+      {product.slice(0, 4).map((d) => {
         return (
           <div key={d.id}>
-            <Border id={d.id} image={d.image} name={d.name} price={d.price} note={d.note} idRestaurant={d.idRestaurant} />
+            <Border id={d.id} image={d.image} name={d.name} price={d.price} note={d.note} defaultImage={defaultImage} />
           </div>
         )
       })}

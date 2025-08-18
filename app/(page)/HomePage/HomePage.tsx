@@ -11,7 +11,7 @@ const HomePage = ({defaultImage} : any) => {
   return (
     <div className='flex flex-col justify-center items-center'>
       <BestSeller defaultImage={defaultImage}/>
-      <div className='flex justify-center items-center gap-x-20 flex-wrap p-10 rounded-2xl mt-20
+      <div className='w-[1400px] flex justify-center items-center gap-x-20 flex-wrap p-10 rounded-2xl mt-20
         not-md:gap-y-5' style={{ boxShadow: '0 0 5px rgba(0,0,0,0.3)'}}>
         <ContactInfoSection />
       </div>
