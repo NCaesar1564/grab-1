@@ -31,10 +31,10 @@ const ContactInfoSection = () => {
                 return (
                     <div key={d.id} className='
                      max-w-full flex justify-center items-center gap-y-6
-                    md:h-16
+                    lg:h-16
                     '>
                         <Card icon={d.icon} lNote={d.lNote} sNote={d.sNote} />
-                        <div className={`h-full border-amber-400 not-md:hidden ${index !== Section.length - 1 ? "border border-l border-gray-300" : "border-none"}`}></div>
+                        <div className={`h-full border-amber-400 not-lg:hidden ${index !== Section.length - 1 ? "border border-l border-gray-300" : "border-none"}`}></div>
                     </div>
                 )
             })}

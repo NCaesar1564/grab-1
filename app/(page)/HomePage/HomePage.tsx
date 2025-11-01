@@ -7,18 +7,18 @@ import Service from '@/app/component/Home/Home.Service/Service'
 import Testimonial from '@/app/component/Home/Home.Testimanial/Testimonial'
 import React from 'react'
 
-const HomePage = ({defaultImage} : any) => {
+const HomePage = () => {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <BestSeller defaultImage={defaultImage}/>
-      <div className='w-[1400px] flex justify-center items-center gap-x-20 flex-wrap p-10 rounded-2xl mt-20
-        not-md:gap-y-5' style={{ boxShadow: '0 0 5px rgba(0,0,0,0.3)'}}>
+      <BestSeller />
+      <div className='w-[1400px] flex justify-center items-center gap-x-20 flex-wrap p-10 rounded-2xl mt-20 not-lg:hidden shadow-[#B6B6B6]'
+        style={{ boxShadow: '0 0 4px rgba(0,0,0,0.1)' }}>
         <ContactInfoSection />
       </div>
-      <Product defaultImage={defaultImage}/>
-      <Service />
-      <DeliveryWay />
-      <Testimonial defaultImage={defaultImage}/>
+      <Product />
+      <Service/>
+      <DeliveryWay/>
+      <Testimonial/>
       <SendMail />
     </div>
   )

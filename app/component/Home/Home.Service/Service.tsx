@@ -1,36 +1,33 @@
 import React from 'react'
 import Card from './card/card'
-import Titile from '../../ui/Titile'
+import Titile from '../../ui/Title'
 const Service = () => {
     const data = [
         {
             id: 1,
-            titile: "Qualityfull food",
+            title: "Qualityfull food",
             note: "But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron"
         },
         {
             id: 2,
-            titile: "Heathy food",
+            title: "Heathy food",
             note: "But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron."
         },
         {
             id: 3,
-            titile: "Fast Delivery",
+            title: "Fast Delivery",
             note: "But I must explain to you how all this mistaken idea of denouncing pleasur and prasising pain was bron."
         }
     ]
     return (
-        <div    >
-            <Titile bTitile="Why Choose Our Food Favourite" sTitile="Services"/>
-            <div className='w-full flex justify-center items-center gap-10
-            not-md:flex-col'>
+        <div className='w-full flex flex-col justify-center items-center not-lg:hidden'>
+            <Titile bTitle="Why Choose Our Food Favourite" sTitle="Services" />
+            <div className='w-[1300px] flex justify-center items-center gap-10
+            not-lg:flex-col'>
                 {data.map((d) => {
                     return (
-                        <div key={d.id} className='flex justify-center
-                        md:w-[25vw] md:h-[50vh]
-                        not-md:w-full not-md:h-[25vh] 
-                        '>
-                            <Card titile={d.titile} note={d.note} />
+                        <div key={d.id} className='w-[400px] h-[400px] flex justify-center '>
+                            <Card title={d.title} note={d.note} />
                         </div>
                     )
                 })}

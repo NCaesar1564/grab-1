@@ -75,28 +75,32 @@
             "name": "Burger",
             "image": "/images/burger_sandwich_PNG4135.png",
             "note": "Mushroom Sauce",
-            "price": "5.15"
+            "price": "5.15",
+            "vote": 5
         },
         {
             "id": 2,
             "name": "Food Combo",
             "image": "/images/Combo-Junk-Food-PNG-Image.png",
             "note": "Mushroom Sauce",
-            "price": "9.15"
+            "price": "9.15",
+            "vote": 5
         },
         {
             "id": 3,
             "name": "Pizza",
             "image": "/images/pizza-png-12.png",
             "note": "Mushroom Sauce",
-            "price": "6.15"
+            "price": "6.15",
+            "vote": 5
         },
         {
             "id": 4,
             "name": "Cake",
             "image": "/images/purepng.png",
             "note": "Mushroom Sauce",
-            "price": "5.15"
+            "price": "5.15",
+            "vote": 5
         },
         {
             "id": 5,
@@ -128,7 +132,6 @@
             "image": "/images/product/delish-200305-grilled-green-beans-0204-landscape-pf-1584045271.png",
             "note": "Cheesy pizza topped with vegetables and herbs",
             "price": 18.50,
-            "idRestaurant": 1,
             "vote": 5
         },
         {

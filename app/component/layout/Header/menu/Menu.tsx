@@ -6,9 +6,9 @@ import Element from './Element'
 const Menu = () => {
   const Item = [
     { id: 1, name: "Home", href: "/" },
-    { id: 2, name: "Menu", href: "/Menu" },
-    { id: 3, name: "Service", href: "/Service" },
-    { id: 4, name: "Offers", href: "/Offers" }
+    { id: 2, name: "Menu", href: "/menu" },
+    { id: 3, name: "Service", href: "/service" },
+    { id: 4, name: "Offers", href: "/offers" }
   ]
   return (
     <>

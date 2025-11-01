@@ -1,11 +1,7 @@
 import HomePage from './HomePage'
 
-const page = (defaultImage: any) => {
-  return (
-    <div>
-      <HomePage defaultImage={defaultImage}/>
-    </div>
-  )
+const page = () => {
+  return <HomePage/>
 }
 
 export default page

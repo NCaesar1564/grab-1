@@ -23,25 +23,17 @@ const Footer = () => {
 
     return (
         <div className='w-full h-[20em] flex flex-col justify-center items-center'>
-            <div className='w-full bg-green-50 flex justify-center items-start pt-5
-            md:h-[18em]
-            not-md:h-[14em]'>
+            <div className='w-full bg-green-50 flex justify-center items-start pt-5 lg:h-[18em] not-lg:h-[14em]'>
                 <NavL />
             </div>
-            <div className='w-full bg-[#195A00] flex justify-center items-center 
-            md:h-[3em]
-            not-md:h-[6em]'>
-                <div className='w-[80%] grid grid-cols-10 not-md:gap-2'>
-                    <div className='flex justify-start items-center gap-0.5 text-white 
-                    md:col-span-5 
-                    not-md:col-span-10 not-md:text-xs not-md:text-nowrap'>
+            <div className='w-full bg-[#195A00] flex justify-center items-center lg:h-[3em] not-lg:h-[6em]'>
+                <div className='w-[80%] grid grid-cols-10 not-lg:gap-2'>
+                    <div className='flex justify-start items-center gap-0.5 text-white lg:col-span-5  not-lg:col-span-10 not-lg:text-xs not-lg:text-nowrap'>
                         <p>Copyright</p>
                         <MdCopyright />
                         <p>2024 Shawon3 Themes. All rights reserved</p>
                     </div>
-                    <div className="flex gap-5  
-                    md:col-span-5 md:justify-end
-                    not-md:col-span-10 not-md:justify-center not-md:underline">
+                    <div className="flex gap-5 lg:col-span-5 lg:justify-end not-lg:col-span-10 not-lg:justify-center not-lg:underline">
                         {SmNav.map((d) => {
                             return (
                                 <div key={d.id}>

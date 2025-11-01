@@ -6,7 +6,7 @@ import Menu from "./menu/Menu"
 import Search from "./button/Search"
 import Cart from "./button/Cart"
 import Login from "./button/Login"
-import axios from "axios"
+import { useRouter } from "next/navigation"
 
 interface User {
   _id: string,
@@ -25,83 +25,68 @@ const Header = () => {
   const [search, setSearch] = useState(false);
   const [keyword, setKeyword] = useState("");
   const [quality, setQuality] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
+  const [userName, setUserName] = useState("");
+  const [show, setShow] = useState(false)
+  const router = useRouter()
+  const ShowAll = () => {
+    setShow(!show)
+  }
+  const handleCart = () => {
+    const islogged = localStorage.getItem("accessToken");
+    if (islogged) {
+      router.push("/cart")
+    } else {
+      router.push("/auth#login")
+    }
+  }
+  const handleLogout = () => {
+    localStorage.removeItem("accessToken")
+    localStorage.removeItem("refreshToken")
+    localStorage.removeItem("userName")
+    localStorage.clear();
+    router.push('/')
+    window.location.reload()
+
+  }
   useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth > 768);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    const token = localStorage.getItem("accessToken");
+    const storedUser = localStorage.getItem("userName");
+    if (token) {
+      setIsLogged(true);
+      setUserName(storedUser || "");
+    } else {
+      setIsLogged(false);
+      setUserName("");
+    }
   }, []);
-  const SearchInput = () => {
-    setSearch(!search);
-  }
-  const onTextChange = (e: any) => {
-    setKeyword(e.target.value)
-  }
-
-  if (isDesktop) {
-    return (
-      <div className='w-full h-[3.75em] flex items-center justify-center mt-[20px]'>
-        <div className="w-[1411px] h-0 flex items-center justify-center ">
-          <div className="flex justify-center
-          md:w-2/12 ">
-            <Logo />
-          </div>
-          <div className={`
-          flex justify-center items-center 
-          md:w-10/12
-          `
-          }>
-            <div className="
-            flex justify-center items-center
-            md:w-6/12">
-              <div className="flex justify-center items-center gap-5 flex-row">
-                <Menu />
-              </div>
-            </div>
-
-            <div className="w-4/12 flex justify-end items-center gap-8">
-              <Search SearchInput={SearchInput} search={search} onTextChange={onTextChange} />
-              <div className="
-              flex gap-8 justify-center items-center">
-                <div className="flex  items-center text-nowrap gap-1">
-                  <p className='md:hidden font-bold'>Giỏ hàng</p>
-                  <Cart quality={quality} />
-                </div>
-                <div>
-                  <Login state={false} />
-                </div>
-              </div>
-            </div>
-          </div>
+  const SearchInput = () => { setSearch(!search) }
+  const onTextChange = (e: any) => { setKeyword(e.target.value) }
+  return (
+    <div className='w-full h-[3.75em] flex items-center justify-center mt-[20px] z-50'>
+      <div className="w-[1411px] h-0 flex items-center justify-center ">
+        <div className="flex justify-center w-2/12 ">
+          <Logo />
         </div>
-      </div>
-    )
-  } else {
-    return (
-      <div className="w-full flex flex-col gap-6 p-2">
-        <div className="w-full flex items-center justify-center gap-3">
-          <div className="w-1/3 flex justify-center">
-            <Logo />
+        <div className={`flex justify-center items-center w-10/12`}>
+          <div className="flex justify-center items-center w-6/12">
+            <div className="flex justify-center items-center gap-5 flex-row">
+              <Menu />
+            </div>
           </div>
-          <div className="w-1/3 flex justify-end">
+
+          <div className="w-4/12 flex justify-end items-center gap-8">
             <Search SearchInput={SearchInput} search={search} onTextChange={onTextChange} />
-          </div>
-          <div className="w-1/3 flex justify-center">
-            <Login state={false} />
-          </div>
-        </div>
-        <div className="flex items-center justify-center border py-2">
-          <div className="flex flex-row gap-3">
-            <Menu />
-            <Cart quality={quality} />
+            <div className="flex gap-8 justify-center items-center">
+              <div className="flex  items-center text-nowrap gap-1 ">
+                <Cart quality={quality} handleCart={handleCart} />
+              </div>
+              <Login state={isLogged} userName={userName} Logout={handleLogout} ShowAll={ShowAll} show={show} />
+            </div>
           </div>
         </div>
       </div>
-    )
-  }
-
+    </div>
+  )
 }
 export default Header

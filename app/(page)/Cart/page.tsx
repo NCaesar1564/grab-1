@@ -1,11 +1,2 @@
-import React from 'react'
-
-const page = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
-
-export default page
+import Cart from './Cart'
+export default function page() { return <Cart /> }

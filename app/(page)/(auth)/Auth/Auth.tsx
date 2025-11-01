@@ -5,6 +5,7 @@ import Register from '../Register/page';
 
 const auth = () => {
     const [page, setPage] = useState("login");
+    
     useEffect(() => {
         const ChangePage = () => {
             setPage(window.location.hash === "#register" ? "register" : "login")
