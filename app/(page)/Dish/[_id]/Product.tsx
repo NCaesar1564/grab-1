@@ -57,7 +57,7 @@ const Product = () => {
 
     useEffect(() => {
         if (_id) {
-            axios.get(`http://localhost:8080/products/public/${_id}`)
+            axios.get(`${process.env.PRODUCT_PUBLIC_HOST}/${_id}`)
                 .then(res => setProduct(res.data.data))
                 .catch(err => console.error(err))
         }
@@ -74,7 +74,7 @@ const Product = () => {
         try {
             const token = localStorage.getItem("accessToken")
             if (!token) { router.push('/auth#login') }
-            const res = await axios.post(`http://localhost:8080/cart/items`,
+            const res = await axios.post(`${process.env.PRODUCT_PUBLIC_HOST}`,
                 {
                     product_id,
                     quantity: quantity

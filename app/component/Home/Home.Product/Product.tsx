@@ -71,7 +71,7 @@ const Product = ({ title }: any) => {
   }
 
   useEffect(() => {
-    axios.get('http://localhost:8080/products/public')
+    axios.get(`${process.env.PRODUCT_PUBLIC_HOST}`)
       .then(data => setPop(data.data.data))
       .catch(err => console.error(err))
   }, [])

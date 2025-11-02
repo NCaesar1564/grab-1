@@ -20,7 +20,7 @@ const Cart = () => {
       try {
         const token = localStorage.getItem("accessToken");
         if (!token) return
-        const res = await axios.get(`http://localhost:8080/cart/me`, {
+        const res = await axios.get(`${process.env.USER_CART_HOST}`, {
           headers: {
             Authorization: `Bearer ${token}`
           },

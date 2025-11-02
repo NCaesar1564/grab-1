@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     setMessage("");
     try {
-      const res = await axios.post("http://localhost:8080/auth/login", { username, password });
+      const res = await axios.post(`${process.env.LOGIN_HOST}`, { username, password });
       setMessage("Successfully");
       const accessToken = res.data.data.access_token;
       const refreshToken = res.data.data.refresh_token;

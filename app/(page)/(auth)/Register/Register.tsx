@@ -6,7 +6,6 @@ import Checkbox from '@/app/component/Auth/checkbox/checkbox'
 import Button from '@/app/component/Auth/input/button'
 import { useState } from 'react'
 import axios from 'axios'
-import { redirect } from 'next/navigation'
 const Register = () => {
   const [username, setName] = useState("");
   const [password, setPassword] = useState("");
@@ -18,7 +17,7 @@ const Register = () => {
     setMessage("");
     if (password !== confirmPassword) { setMessage("Confirm password is not match"); return }
     try {
-      const res = await axios.post("http://localhost:8080/auth/signup", {
+      const res = await axios.post(`${process.env.LOGIN_HOST}`, {
         username, email, password, rolename: "user"
       })
       setMessage("Successfully");
